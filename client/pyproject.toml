@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-mem"
+version = "0.1.0"
+description = "Portable CLI and MCP client for the ai-mem Azure platform"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "requests>=2.31.0",
+  "mcp>=1.0.0",
+]
+
+[project.scripts]
+ai-mem = "ai_mem.cli:main"
+ai-mem-mcp = "ai_mem.mcp_server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,12 @@
+{
+  "scriptFile": "run.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "%MEMORY_EMBED_QUEUE_NAME%",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
